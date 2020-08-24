@@ -22,3 +22,12 @@ do
     /scratch/monoallelic/shared/ASM_insects/genomes/lambda_genome \
      -1 ${base}1.fq.gz -2 ${base}2.fq.gz
 done
+
+for file in $(ls *1.fq.gz)
+do
+  	base=$(basename $file "1.fq.gz")
+    /scratch/monoallelic/shared/ASM_insects/bin/Bismark-0.22.3/bismark --multicore 6 \
+    --prefix ecoli \
+    /scratch/monoallelic/shared/ASM_insects/genomes/ecoli_genome \
+     -1 ${base}1.fq.gz -2 ${base}2.fq.gz
+done
