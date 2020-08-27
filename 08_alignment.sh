@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #PBS -N alignment_to_ref
-#PBS -l walltime=08:00:00
+#PBS -l walltime=45:00:00
 #PBS -l vmem=20gb
 #PBS -m bea
 #PBS -M hollie_marshall@hotmail.co.uk
